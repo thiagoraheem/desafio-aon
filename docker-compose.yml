@@ -1,8 +1,10 @@
 services:
   backend:
-    build: ./
+    build: ./backend
     ports:
       - '3001:3001'
+    volumes:
+      - ./backend/uploads:/app/uploads
     environment:
       - DB_USER=postgres
       - DB_PASSWORD=senhaForte
